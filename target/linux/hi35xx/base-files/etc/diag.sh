@@ -32,9 +32,9 @@ gpio_init() {
 		devmem 0x200f0074 32 0x000 && echo " | GPIO0_1 | GPIO1  | led_red   | Board Qtech WiFi QVC-IPC-136                     | SoC hi3518ev200 | " | logger -t gpio_init
 		devmem 0x200f0078 32 0x000 && echo " | GPIO0_2 | GPIO2  | led_yel   | Board Qtech WiFi QVC-IPC-136                     | SoC hi3518ev200 | " | logger -t gpio_init
 		devmem 0x200f000c 32 0x000 && echo " | GPIO0_7 | GPIO7  | wifi_ena  | Board Qtech WiFi QVC-IPC-136                     | SoC hi3518ev200 | " | logger -t gpio_init
-		#echo 7 >/sys/class/gpio/export ; echo "out" >/sys/class/gpio/gpio7/direction ; echo 1 >/sys/class/gpio/gpio7/value ; echo "Set gpio7 wifi_pow UP"
 		devmem 0x200f00bc 32 0x00  && echo " | GPIO5_7 | GPIO47 | ircut_1   | Board Qtech WiFi QVC-IPC-136                     | SoC hi3518ev200 | " | logger -t gpio_init
 		devmem 0x200f00c0 32 0x00  && echo " | GPIO6_0 | GPIO48 | ircut_2   | Board Qtech WiFi QVC-IPC-136                     | SoC hi3518ev200 | " | logger -t gpio_init
+		#echo 7 >/sys/class/gpio/export ; echo "out" >/sys/class/gpio/gpio7/direction ; echo 1 >/sys/class/gpio/gpio7/value ; echo "Set gpio7 wifi_pow UP"
 		#
 		devmem 0x200f0074 32 0x000 && echo " | GPIO0_1 | GPIO1  | ircut_1   | Board CamHi unknown WiFi MT7601U                 | SoC hi3518ev200 | " | logger -t gpio_init
 		devmem 0x200f0078 32 0x000 && echo " | GPIO0_2 | GPIO2  | ircut_2   | Board CamHi unknown WiFi MT7601U                 | SoC hi3518ev200 | " | logger -t gpio_init

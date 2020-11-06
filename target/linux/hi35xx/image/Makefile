@@ -145,6 +145,18 @@ endif # ifeq ($(SUBTARGET),16ev100)
 
 
 
+ifeq ($(SUBTARGET),16ev200)
+    $(eval $(call NewDevice,default,DEFAULT,DEFAULT,ALL,HI3516EV200,320k,DEFAULT)) # @flyrouter
+endif # ifeq ($(SUBTARGET),16ev200)
+
+
+
+ifeq ($(SUBTARGET),16ev300)
+    $(eval $(call NewDevice,default,DEFAULT,DEFAULT,ALL,HI3516EV300,320k,DEFAULT)) # @flyrouter
+endif # ifeq ($(SUBTARGET),16ev300)
+
+
+
 ifeq ($(SUBTARGET),18cv100)
     $(eval $(call NewDevice,default,DEFAULT,DEFAULT,ALL,HI3518CV100,320k,DEFAULT)) # @flyrouter
     $(eval $(call NewDevice,beward-ds06m,BW-DS06M,Beward DS06M,IMX138,HI3518CV100,512k,BEWARD_DS06M)) # @ussh

@@ -8,7 +8,23 @@ include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/image.mk
 include $(INCLUDE_DIR)/host.mk
 
-KERNEL_LOADADDR = 0x80008000
+
+loadaddr-y := 0x80008000
+
+loadaddr-$(CONFIG_TARGET_hi35xx_16cv100) := 0x80008000
+loadaddr-$(CONFIG_TARGET_hi35xx_16cv200) := 0x80008000
+loadaddr-$(CONFIG_TARGET_hi35xx_16cv300) := 0x80008000
+loadaddr-$(CONFIG_TARGET_hi35xx_16dv100) := 0x80008000
+loadaddr-$(CONFIG_TARGET_hi35xx_16ev100) := 0x80008000
+loadaddr-$(CONFIG_TARGET_hi35xx_16ev200) := 0x40008000
+loadaddr-$(CONFIG_TARGET_hi35xx_16ev300) := 0x40008000
+loadaddr-$(CONFIG_TARGET_hi35xx_18cv100) := 0x80008000
+loadaddr-$(CONFIG_TARGET_hi35xx_18ev100) := 0x80008000
+loadaddr-$(CONFIG_TARGET_hi35xx_18ev200) := 0x80008000
+loadaddr-$(CONFIG_TARGET_hi35xx_18ev201) := 0x80008000
+
+KERNEL_LOADADDR := $(loadaddr-y)
+
 
 IMAGE_HEADER_INFO:=OpenIPC.org | Linux-$(LINUX_VERSION)
 

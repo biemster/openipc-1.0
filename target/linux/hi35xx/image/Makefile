@@ -37,6 +37,31 @@ KDIR_TMP:=$(KDIR)/tmp
 VMLINUX:=$(BIN_DIR)/$(IMG_PREFIX)-vmlinux
 UIMAGE:=$(BIN_DIR)/$(IMG_PREFIX)-uImage
 
+
+
+# $(1) source dts file ; $(2) target dtb file ; $(3) extra CPP flags ; $(4) extra DTC flags
+define Image/BuildDTB
+	$(TARGET_CROSS)cpp -nostdinc -x assembler-with-cpp \
+		-I$(DTS_DIR) \
+		-I$(DTS_DIR)/include \
+		-I$(LINUX_DIR)/include/ \
+		-undef -D__DTS__ $(3) \
+		-o $(2).tmp $(1)
+	$(LINUX_DIR)/scripts/dtc/dtc -O dtb \
+		-i$(dir $(1)) $(DTC_FLAGS) $(4) \
+		-o $(2) $(2).tmp
+	$(RM) $(2).tmp
+endef
+
+#DEVICE_DTS_LIST:= hi3516ev200 hi3516ev300
+
+#define Image/Prepare
+#	# Build .dtb for all boards we may run on
+#	$(foreach dts,$(DEVICE_DTS_LIST),
+#	$(call Image/BuildDTB,$(DTS_DIR)/$(dts).dts,$(DTS_DIR)/$(dts).dtb)
+#	)
+#endef
+
 define Build/prepend-with-elf
     mv $@ $@.old
     dd if=$(KDIR)/loader.elf of=$@ bs=131072 conv=sync
@@ -54,6 +79,8 @@ endef
 
 # Build commands that can be called from Device/* templates
 define Build/uImage
+    $(call Image/BuildDTB,$(DTS_DIR)/hi35$(SUBTARGET)-demb.dts,$(DTS_DIR)/hi35$(SUBTARGET).dtb)
+
     mkimage -A $(LINUX_KARCH) \
         -O linux -T kernel \
         -C $(1) -a $(KERNEL_LOADADDR) -e $(if $(KERNEL_ENTRY),$(KERNEL_ENTRY),$(KERNEL_LOADADDR)) \

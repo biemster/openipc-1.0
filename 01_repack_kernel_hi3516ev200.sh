@@ -8,7 +8,7 @@ clear
 cat ${IMG} ${DTB} > ./zImage-dtb
 
 ./staging_dir/host/bin/mkimage \
-  -A arm -O linux -T kernel -C none -a 0x40008000 -e 0x40008000 -n "OpenIPC $(date '+%Y.%m.%d %H:%M:%S')" \
+  -A arm -O linux -T kernel -C none -a 0x40008000 -e 0x40008000 -n "OpenIPC.org | $(date '+%Y.%m.%d %H:%M')" \
   -d ./zImage-dtb ./uImage
 
 echo

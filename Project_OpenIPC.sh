@@ -104,7 +104,7 @@ case $build in
 
 ###
 
-  hi3518av100_DEFAULT)
+  18av100_DEFAULT)
     SOC=${build}
     prepare_image_config ${SOC} "3.0.8" "config_armv5tej_luci_default"
     start_build
@@ -240,6 +240,14 @@ case $build in
 
 ###
 
+  18ev300_DEFAULT)
+    SOC=${build}
+    prepare_image_config ${SOC} "4.9.37" "config_18ev300_DEFAULT"
+    start_build
+    ;;
+
+###
+
   20dv100_DEFAULT)
     SOC=${build}
     prepare_image_config ${SOC} "3.0.8" "config_20dv100_zftlab_telemetry"
@@ -307,7 +315,7 @@ case $build in
     echo -e "\n#####################################"
     echo -e "\nMore information on the site - http://openipc.org\n"
     echo -e "\nPLEASE SELECT ONE OPTION IN COMMAND LINE"
-    echo -e "\nBest tested profiles:\n\n  16cv100_DEFAULT\n\n  16cv200_DEFAULT\n  16cv200_jvt_s323h16vf\n  16cv200_zftlab_acsys\n  16cv200_zftlab_megacam\n\n  16cv300_DEFAULT\n\n  16ev100_DEFAULT\n\n  16ev200_DEFAULT\n\n  16ev300_DEFAULT\n\n  18av100_DEFAULT\n\n  18cv100_DEFAULT\n  18cv100_zftlab_vixand\n\n  18ev100_DEFAULT\n  18ev100_zftlab_vixand\n\n  18ev200_DEFAULT\n  18ev200_jvt_s130h18v\n  18ev200_jvt_s135h18vf\n  18ev200_switcam_hs303\n  18ev200_switcam_hs303_rotek\n  18ev200_xm_blk18ev_0035_0042\n  18ev200_zftlab_baresip\n  18ev200_zftlab_dbell\n  18ev200_zftlab_megacam\n  18ev200_zftlab_mini\n  18ev200_zftlab_okulus\n  18ev200_zftlab_rotek\n  18ev200_zftlab_tehshield\n  18ev200_zftlab_telemetry\n  18ev200_zftlab_vixand\n\n  18ev201_DEFAULT\n\n  20dv100_DEFAULT\n\n  20dv200_DEFAULT\n"
+    echo -e "\nBest tested profiles:\n\n  16cv100_DEFAULT\n\n  16cv200_DEFAULT\n  16cv200_jvt_s323h16vf\n  16cv200_zftlab_acsys\n  16cv200_zftlab_megacam\n\n  16cv300_DEFAULT\n\n  16ev100_DEFAULT\n\n  16ev200_DEFAULT\n\n  16ev300_DEFAULT\n\n  18av100_DEFAULT\n\n  18cv100_DEFAULT\n  18cv100_zftlab_vixand\n\n  18ev100_DEFAULT\n  18ev100_zftlab_vixand\n\n  18ev200_DEFAULT\n  18ev200_jvt_s130h18v\n  18ev200_jvt_s135h18vf\n  18ev200_switcam_hs303\n  18ev200_switcam_hs303_rotek\n  18ev200_xm_blk18ev_0035_0042\n  18ev200_zftlab_baresip\n  18ev200_zftlab_dbell\n  18ev200_zftlab_megacam\n  18ev200_zftlab_mini\n  18ev200_zftlab_okulus\n  18ev200_zftlab_rotek\n  18ev200_zftlab_tehshield\n  18ev200_zftlab_telemetry\n  18ev200_zftlab_vixand\n\n  18ev201_DEFAULT\n\n  18ev300_DEFAULT\n\n  20dv100_DEFAULT\n\n  20dv200_DEFAULT\n"
     echo -e "\n#####################################"
     (echo -e "\nCheck OPENWRT repo...\n" ; git status)
     echo -e "\n#####################################"

@@ -79,7 +79,9 @@ endef
 
 # Build commands that can be called from Device/* templates
 define Build/uImage
-    $(call Image/BuildDTB,$(DTS_DIR)/hi35$(SUBTARGET)-demb.dts,$(DTS_DIR)/hi35$(SUBTARGET).dtb)
+# $(call Image/BuildDTB-fake,$(DTS_DIR)/hi35$(SUBTARGET)-demb.dts,$(DTS_DIR)/hi35$(SUBTARGET).dtb)
+
+    $(call Image/BuildDTB-fake,$(DTS_DIR)/hi35$(SUBTARGET)-demb.dts,$(DTS_DIR)/hi35$(SUBTARGET).dtb)
 
     mkimage -A $(LINUX_KARCH) \
         -O linux -T kernel \
@@ -228,6 +230,12 @@ endif # ifeq ($(SUBTARGET),18ev200)
 ifeq ($(SUBTARGET),18ev201)
     $(eval $(call NewDevice,default,DEFAULT,DEFAULT,ALL,HI3518EV201,320k,DEFAULT)) # @flyrouter
 endif # ifeq ($(SUBTARGET),18ev201)
+
+
+
+ifeq ($(SUBTARGET),18ev300)
+    $(eval $(call NewDevice,default,DEFAULT,DEFAULT,ALL,HI3518EV300,320k,DEFAULT)) # @flyrouter
+endif # ifeq ($(SUBTARGET),18ev300)
 
 
 

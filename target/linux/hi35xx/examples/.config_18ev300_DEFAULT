@@ -42,25 +42,23 @@ CONFIG_TARGET_hi35xx=y
 # CONFIG_TARGET_x86 is not set
 # CONFIG_TARGET_hi35xx_15av100 is not set
 # CONFIG_TARGET_hi35xx_15cv100 is not set
-# CONFIG_TARGET_hi35xx_16av100 is not set
 # CONFIG_TARGET_hi35xx_16av200 is not set
 # CONFIG_TARGET_hi35xx_16cv100 is not set
 # CONFIG_TARGET_hi35xx_16cv200 is not set
 # CONFIG_TARGET_hi35xx_16cv300 is not set
-# CONFIG_TARGET_hi35xx_16dv100 is not set
 # CONFIG_TARGET_hi35xx_16ev100 is not set
-CONFIG_TARGET_hi35xx_16ev200=y
+# CONFIG_TARGET_hi35xx_16ev200 is not set
 # CONFIG_TARGET_hi35xx_16ev300 is not set
 # CONFIG_TARGET_hi35xx_18av100 is not set
 # CONFIG_TARGET_hi35xx_18cv100 is not set
 # CONFIG_TARGET_hi35xx_18ev100 is not set
 # CONFIG_TARGET_hi35xx_18ev200 is not set
 # CONFIG_TARGET_hi35xx_18ev201 is not set
-# CONFIG_TARGET_hi35xx_18ev300 is not set
-# CONFIG_TARGET_hi35xx_19v101 is not set
+CONFIG_TARGET_hi35xx_18ev300=y
 # CONFIG_TARGET_hi35xx_20dv100 is not set
 # CONFIG_TARGET_hi35xx_20dv200 is not set
-CONFIG_TARGET_hi35xx_16ev200_DEFAULT=y
+# CONFIG_TARGET_hi35xx_16cv300_DEFAULT is not set
+CONFIG_TARGET_hi35xx_16ev300_DEFAULT=y
 CONFIG_HAS_SUBTARGETS=y
 CONFIG_TARGET_BOARD="hi35xx"
 CONFIG_TARGET_ARCH_PACKAGES="hi35xx"
@@ -224,8 +222,8 @@ CONFIG_USE_UCLIBCXX=y
 #
 # CONFIG_PKG_CHECK_FORMAT_SECURITY is not set
 CONFIG_PKG_CC_STACKPROTECTOR_NONE=y
-# CONFIG_KERNEL_CC_STACKPROTECTOR_NONE is not set
-CONFIG_KERNEL_CC_STACKPROTECTOR_REGULAR=y
+CONFIG_KERNEL_CC_STACKPROTECTOR_NONE=y
+# CONFIG_KERNEL_CC_STACKPROTECTOR_REGULAR is not set
 CONFIG_PKG_FORTIFY_SOURCE_NONE=y
 # CONFIG_PKG_FORTIFY_SOURCE_1 is not set
 # CONFIG_PKG_FORTIFY_SOURCE_2 is not set
@@ -4229,8 +4227,8 @@ CONFIG_PACKAGE_wpad-mini=m
 # CONFIG_PACKAGE_hisi-osdrv1-sensor is not set
 # CONFIG_PACKAGE_hisi-osdrv2-sensor is not set
 # CONFIG_PACKAGE_hisi-osdrv3-sensor is not set
-CONFIG_PACKAGE_hisi-osdrv4-kmod=y
-CONFIG_PACKAGE_hisi-osdrv4-lib=y
+# CONFIG_PACKAGE_hisi-osdrv4-kmod is not set
+# CONFIG_PACKAGE_hisi-osdrv4-lib is not set
 
 #
 # Library
@@ -4617,4 +4615,4 @@ CONFIG_PACKAGE_usbreset=y
 # CONFIG_PACKAGE_yanglint is not set
 # CONFIG_PACKAGE_yunbridge is not set
 # CONFIG_PACKAGE_zsh is not set
-CONFIG_OVERRIDE_PKGS="libnetfilter-queue libnetfilter-cttimeout libnetfilter-cthelper"
+CONFIG_OVERRIDE_PKGS="libnetfilter-cttimeout libnetfilter-queue libnetfilter-cthelper"

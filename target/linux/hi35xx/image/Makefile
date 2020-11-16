@@ -79,9 +79,7 @@ endef
 
 # Build commands that can be called from Device/* templates
 define Build/uImage
-# $(call Image/BuildDTB-fake,$(DTS_DIR)/hi35$(SUBTARGET)-demb.dts,$(DTS_DIR)/hi35$(SUBTARGET).dtb)
-
-    $(call Image/BuildDTB-fake,$(DTS_DIR)/hi35$(SUBTARGET)-demb.dts,$(DTS_DIR)/hi35$(SUBTARGET).dtb)
+    $(call Image/BuildDTB,$(DTS_DIR)/hi35$(SUBTARGET)-demb.dts,$(DTS_DIR)/hi35$(SUBTARGET).dtb)
 
     mkimage -A $(LINUX_KARCH) \
         -O linux -T kernel \

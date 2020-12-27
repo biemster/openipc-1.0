@@ -258,7 +258,7 @@ case $build in
 
   20dv200_DEFAULT)
     SOC=${build}
-    prepare_image_config ${SOC} "3.0.8" "config_20dv200_zftlab_telemetry"
+    prepare_image_config ${SOC} "3.0.8" "config_20dv200_DEFAULT"
     start_build
     ;;
 

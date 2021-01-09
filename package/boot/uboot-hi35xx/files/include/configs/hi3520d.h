@@ -127,8 +127,8 @@
 #define CONFIG_ETHADDR		00:00:23:34:45:66
 #define CONFIG_BOOTFILE		"uImage"        /* file to load */
 #define CONFIG_BAUDRATE		115200
-#define CONFIG_OSMEM		32M
-#define CONFIG_SENSOR		auto
+#define CONFIG_OSMEM		128M
+#define CONFIG_SENSOR		none
 #define CONFIG_LINUX_CMD	version
 
 /*-----------------------------------------------------------------------
@@ -300,5 +300,6 @@
 #define ENABLE_HI3515A_BLANK
 #define REG_INFO_BLANK_SIZE 2400
 
-#define CONFIG_OSD_ENABLE
+/*#define CONFIG_OSD_ENABLE*/
+
 #endif	/* __CONFIG_H */

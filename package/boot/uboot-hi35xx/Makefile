@@ -123,12 +123,12 @@ endif
 
 ifeq ($(BUILD_VARIANT), 20dv100)
     UBOOT_CONFIG:=hi3520d_config
-	REG_FILE:=reg_info_hi3520d_ext.bin
+	REG_FILE:=reg_info_hi3520d_duo.bin
 	COMPRESS:=0
 endif
 ifeq ($(BUILD_VARIANT), 20dv200)
     UBOOT_CONFIG:=hi3520d_config
-	REG_FILE:=reg_info_hi3520d_int.bin
+	REG_FILE:=reg_info_hi3520d_duo.bin
 	COMPRESS:=0
 endif
 

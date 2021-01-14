@@ -7,9 +7,9 @@
 -#define AU_FIRMWARE	"u-boot"
 -#define AU_KERNEL	"kernel"
 -#define AU_ROOTFS	"rootfs"
-+#define AU_FIRMWARE	"u-boot.openipc"
-+#define AU_KERNEL	"kernel.openipc"
-+#define AU_ROOTFS	"rootfs.openipc"
++#define AU_FIRMWARE	"autoupdate-uboot.img"
++#define AU_KERNEL	"autoupdate-kernel.img"
++#define AU_ROOTFS	"autoupdate-rootfs.img"
  
  struct flash_layout {
  	long start;

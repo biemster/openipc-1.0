@@ -1,4 +1,4 @@
-# OpenIPC firmware
+## OpenIPC firmware
 
 Alternative firmware for IP cameras and NVRs based on the HiSilicon SoCs
 

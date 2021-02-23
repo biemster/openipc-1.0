@@ -2,7 +2,7 @@
 
 Alternative firmware for IP cameras and NVRs based on the HiSilicon SoCs
 
-More information about project [here](https://openipc.org) and [here](http://alpha.openipc.org/firmware)
+More information about project on our website [https://openipc.org](https://openipc.org)
 
 [![CI status](https://img.shields.io/github/v/release/OpenIPC/chaos_calmer.svg)](https://github.com/OpenIPC/chaos_calmer/releases)
 [![CI status](https://img.shields.io/github/downloads/OpenIPC/chaos_calmer/total.svg)](https://github.com/OpenIPC/chaos_calmer/releases)
@@ -10,6 +10,14 @@ More information about project [here](https://openipc.org) and [here](http://alp
 [![Backers](https://opencollective.com/openipc/tiers/badge.svg)](https://opencollective.com/openipc)
 
 [![Backers](https://opencollective.com/openipc/tiers/backer.svg?avatarHeight=36)](https://opencollective.com/openipc#support)
+
+## Supporting
+
+If you like our work, please consider supporting us on [Opencollective](https://opencollective.com/openipc) or [PayPal](https://www.paypal.com/donate/?hosted_button_id=C6F7UJLA58MBS). Thanks a lot !!!
+<p align="center">
+<a href="https://opencollective.com/openipc" target="_blank"><img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" width=300 /></a>
+<a href="https://www.paypal.com/donate/?hosted_button_id=C6F7UJLA58MBS"><img src="https://www.paypalobjects.com/en_US/IT/i/btn/btn_donateCC_LG.gif" alt="PayPal donate button" /> </a>
+</p>
 
 ## Pre-built images
 
@@ -102,10 +110,6 @@ RUN git clone --depth=1 https://github.com/OpenIPC/chaos_calmer.git /src/openipc
 RUN ./Project_OpenIPC.sh update
 RUN ./Project_OpenIPC.sh 18ev200_DEFAULT  # <= Change this ID to you profile
 ```
-
-## Sponsor
-
-Please consider donating on [Opencollective](https://opencollective.com/openipc)
 
 ## Commercial Support
 

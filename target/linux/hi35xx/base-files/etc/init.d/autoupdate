@@ -59,6 +59,12 @@ autoupdate() {
         rm -f /mnt/mmc/autoupdate-uboot.img
     fi
 
+    # Remove file u-boot
+    if [ -f /mnt/mmc/u-boot ] ; then
+        echo "Found u-boot, remove it now"
+        rm -f /mnt/mmc/u-boot
+    fi
+
 }
 
 

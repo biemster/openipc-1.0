@@ -274,7 +274,7 @@ case $build in
   changes)
     # Show project changes
     HASH1="ceddf6298ad84c0ac103d25559e4e76a57f5bf76"
-    HASH2="95a1b6efa1"
+    HASH2="fddc8b3511"
     echo -e "\n####################################################################################################\n"
     git diff --name-only ${HASH1} ${HASH2} | grep -v "^dl/" | grep -v "target/linux/ar71xx" | grep -v "^target/linux/hi35xx" | grep -v "^target/linux/ramips" | grep -v "^package/boot" | grep -v "^user_cmarxmeier"
     echo -e "\n####################################################################################################\n"
@@ -286,6 +286,7 @@ case $build in
     #echo -e "\n####################################################################################################\n"
     #git diff --name-only ${HASH1} ${HASH2} | grep -e "^target/linux/ramips"
     #echo -e "\n####################################################################################################\n"
+    #git diff ceddf6298ad84c0ac103d25559e4e76a57f5bf76 fddc8b3511
     ;;
 
   release)

@@ -126,7 +126,7 @@ jobs:
           mkdir -p tmp
           tar cvfz tmp/openipc.hi3516cv200-family.tgz output
           curl $TG_OPTIONS -H "Content-Type: multipart/form-data" -X POST https://api.telegram.org/bot$TG_TOKEN/sendDocument \
-            -F chat_id=$TG_CHANNEL -F document="@tmp/openipc.hi3516cv100-family.tgz" -F caption="$TG_HEADER"
+            -F chat_id=$TG_CHANNEL -F document="@tmp/openipc.hi3516cv200-family.tgz" -F caption="$TG_HEADER"
 
 
 

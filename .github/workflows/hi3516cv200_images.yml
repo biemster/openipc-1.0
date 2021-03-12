@@ -1,4 +1,4 @@
-name: Hi3516Cv200 images
+name: Hi3516Cv200 family images
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 jobs:
   image_build:
     name: images build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
         with:
@@ -31,7 +31,7 @@ jobs:
           docker rmi $(docker image ls -aq)
           df -h
 
-      - name: Hi3516Cv200 images build
+      - name: Hi3516Cv200 family images build
         run: |
           HEAD_TAG=$(git tag --points-at HEAD)
           BRANCH_NAME=$(echo $GITHUB_REF | cut -d'/' -f 3)
@@ -45,10 +45,10 @@ jobs:
             PRERELEASE=false
           fi
           ARCHIVE="output/openwrt-hi35xx-*"
-          echo ::set-env name=ARCHIVE::$ARCHIVE
-          echo ::set-env name=TAG_NAME::$TAG_NAME
-          echo ::set-env name=RELEASE_NAME::$RELEASE_NAME
-          echo ::set-env name=PRERELEASE::$PRERELEASE
+          echo "ARCHIVE=$ARCHIVE" >> $GITHUB_ENV
+          echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
+          echo "RELEASE_NAME=$RELEASE_NAME" >> $GITHUB_ENV
+          echo "PRERELEASE=$PRERELEASE" >> $GITHUB_ENV
 
           ./Project_OpenIPC.sh update
           ./Project_OpenIPC.sh 16cv200_DEFAULT

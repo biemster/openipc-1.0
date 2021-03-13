@@ -44,16 +44,13 @@ UBOOTS+=18cv100
 UBOOTS+=18ev100
 UBOOTS+=18ev200
 UBOOTS+=18ev201
-
 UBOOTS+=20dv100
 UBOOTS+=20dv200
-
-
-# ?
+#
 # hi3535_config
 # hi3516a_config
 # hi3536_config
-# ?
+#
 
 define Package/uboot/template
 define Package/uboot-hi35xx-$(1)
@@ -123,12 +120,12 @@ endif
 
 ifeq ($(BUILD_VARIANT), 20dv100)
     UBOOT_CONFIG:=hi3520d_config
-	REG_FILE:=reg_info_hi3520d_ext.bin
+	REG_FILE:=reg_info_hi3520d_duo.bin
 	COMPRESS:=0
 endif
 ifeq ($(BUILD_VARIANT), 20dv200)
     UBOOT_CONFIG:=hi3520d_config
-	REG_FILE:=reg_info_hi3520d_int.bin
+	REG_FILE:=reg_info_hi3520d_duo.bin
 	COMPRESS:=0
 endif
 

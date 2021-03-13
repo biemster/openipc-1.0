@@ -88,7 +88,7 @@ jobs:
         if: steps.install.outcome != 'success' || steps.build.outcome != 'success'
         run: |
           TG_OPTIONS="-s --connect-timeout 5 --max-time 15"
-          TG_NOTIFY="Warning, Hi3516Cv100 family images build error..."
+          TG_NOTIFY="Warning, Hi3516Cv200 family images build error..."
           TG_HEADER=$(echo -e "\r\n$TG_NOTIFY \r\n\r\nCommit: $GIT_HASH \r\nBranch: $BRANCH_NAME \r\nTag: $TAG_NAME \r\n\r\n\xE2\x9A\xA0 GitHub Actions")
           curl $TG_OPTIONS -H "Content-Type: multipart/form-data" -X POST https://api.telegram.org/bot$TG_TOKEN/sendMessage \
             -F chat_id=$TG_CHANNEL -F text="$TG_HEADER"

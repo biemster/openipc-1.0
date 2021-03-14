@@ -4334,6 +4334,14 @@ CONFIG_PACKAGE_flash_tool=m
 #
 
 #
+# Utils
+#
+CONFIG_PACKAGE_hisi_gpio_scanner=y
+CONFIG_PACKAGE_hisi_gpio_watcher=y
+CONFIG_PACKAGE_memdump=m
+CONFIG_PACKAGE_xmdp=y
+
+#
 # VPN
 #
 CONFIG_PACKAGE_uvpn=m

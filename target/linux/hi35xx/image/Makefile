@@ -99,6 +99,8 @@ define Build/uImage
 	mkimage -A $(LINUX_KARCH) -O linux -T firmware -n '$(IMAGE_HEADER_INFO)' -a $(FLASH_UBOOT_LOADADDR) -e $(FLASH_UBOOT_ENTRY) \
 		-d $(BIN_DIR)/$(IMG_PREFIX)-u-boot.bin $(BIN_DIR)/$(IMG_PREFIX)-autoupdate-uboot.img
 
+	if [ -f $(DTS_DIR)/hi35$(SUBTARGET).dtb ]; then cat $(DTS_DIR)/hi35$(SUBTARGET).dtb >> $@; fi
+
 	mkimage -A $(LINUX_KARCH) -O linux -T kernel \
 		-C $(1) -a $(KERNEL_LOADADDR) -e $(if $(KERNEL_ENTRY),$(KERNEL_ENTRY),$(KERNEL_LOADADDR)) \
 		-n '$(IMAGE_HEADER_INFO)' -d $@ $@.new

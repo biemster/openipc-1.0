@@ -1,4 +1,4 @@
-name: Hi3516Cv100 family images
+name: Hi3516Cv100 family
 
 on:
   push:

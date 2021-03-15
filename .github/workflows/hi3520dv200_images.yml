@@ -1,4 +1,4 @@
-name: Hi3520Dv200 family images
+name: Hi3520Dv200 family
 
 on:
   push:

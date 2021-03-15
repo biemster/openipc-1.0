@@ -73,6 +73,8 @@ jobs:
           mv bin/hi35xx/openwrt-hi35xx-20dv200-default-uImage output
           # mv bin/hi35xx/openwrt-hi35xx-20dv200-u-boot.bin output
 
+        continue-on-error: true
+
       - name: Send warning message to telegram channel
         env:
           TG_TOKEN: ${{ secrets.TELEGRAM_TOKEN_BOT_OPENIPC }}

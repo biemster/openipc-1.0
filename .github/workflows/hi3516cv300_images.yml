@@ -72,6 +72,8 @@ jobs:
           mv bin/hi35xx/openwrt-hi35xx-16ev100-default-root.squashfs output
           mv bin/hi35xx/openwrt-hi35xx-16ev100-default-uImage output
 
+        continue-on-error: true
+
       - name: Send warning message to telegram channel
         env:
           TG_TOKEN: ${{ secrets.TELEGRAM_TOKEN_BOT_OPENIPC }}

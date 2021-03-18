@@ -22,7 +22,7 @@ jobs:
           DEBIAN_FRONTEND=noninteractive sudo apt-get update && sudo apt-get -y install \
           build-essential gawk libncurses-dev intltool python \
           git subversion time unzip zlib1g-dev libssl-dev wget curl cpio bc \
-          gettext gettext-base liblocale-gettext-perl m4
+          gettext gettext-base liblocale-gettext-perl
 
       - name: Free disk space
         run: |

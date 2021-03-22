@@ -8,8 +8,8 @@ on:
       - "v*"
 
 jobs:
-  image_build:
-    name: images build
+  build_16cv200:
+    name: Hi3516Cv200 images
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2

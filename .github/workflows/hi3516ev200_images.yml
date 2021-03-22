@@ -8,8 +8,8 @@ on:
       - "v*"
 
 jobs:
-  image_build:
-    name: images build
+  build_16ev200:
+    name: Hi3516Ev200 images
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -23,14 +23,6 @@ jobs:
           build-essential gawk libncurses-dev intltool python \
           git subversion time unzip zlib1g-dev libssl-dev wget curl cpio bc \
           gettext gettext-base liblocale-gettext-perl
-
-      - name: Free disk space
-        run: |
-          sudo swapoff -a
-          sudo rm -f /swapfile
-          sudo apt clean
-          docker rmi $(docker image ls -aq)
-          df -h
 
       - name: Hi3516Ev200 family images build
         id: build

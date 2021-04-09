@@ -4228,12 +4228,14 @@ CONFIG_PACKAGE_hi35xx_sensor_ar0130=y
 CONFIG_PACKAGE_hi35xx_sensor_imx222=y
 # CONFIG_PACKAGE_hi35xx_sensor_imx225 is not set
 # CONFIG_PACKAGE_hi35xx_sensor_imx323 is not set
-# CONFIG_PACKAGE_hi35xx_sensor_jxf22 is not set
+CONFIG_PACKAGE_hi35xx_sensor_jxf22=y
 CONFIG_PACKAGE_hi35xx_sensor_jxf23=y
+CONFIG_PACKAGE_hi35xx_sensor_ov9712=y
 CONFIG_PACKAGE_hi35xx_sensor_ov9732=y
 CONFIG_PACKAGE_hi35xx_sensor_sc1135=y
 CONFIG_PACKAGE_hi35xx_sensor_sc2035=y
 CONFIG_PACKAGE_hi35xx_sensor_sc2135=y
+# CONFIG_PACKAGE_hi35xx_sensor_sc2235 is not set
 
 #
 # Tools

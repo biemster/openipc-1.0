@@ -3,9 +3,9 @@ name: Hi3516Ev200 family
 on:
   push:
     branches:
-      - master
+      - future
     tags:
-      - "v*"
+      - "vr*"
 
 jobs:
   build_16ev200:

@@ -4208,6 +4208,7 @@ CONFIG_PACKAGE_hisi-osdrv2-base=y
 CONFIG_PACKAGE_hisi-osdrv2-binary=y
 CONFIG_PACKAGE_hisi-osdrv2-kmod=y
 CONFIG_PACKAGE_hisi-osdrv2-lib=y
+CONFIG_PACKAGE_hisi-osdrv2-majestic=y
 CONFIG_PACKAGE_hisi-osdrv2-sensor=m
 
 #

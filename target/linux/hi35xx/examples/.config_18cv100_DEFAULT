@@ -4212,6 +4212,7 @@ CONFIG_PACKAGE_hisi-osdrv1-base=y
 CONFIG_PACKAGE_hisi-osdrv1-binary=y
 CONFIG_PACKAGE_hisi-osdrv1-kmod=y
 CONFIG_PACKAGE_hisi-osdrv1-lib=y
+CONFIG_PACKAGE_hisi-osdrv1-majestic=y
 CONFIG_PACKAGE_hisi-osdrv1-sensor=y
 # CONFIG_PACKAGE_hisi-osdrv2-sensor is not set
 # CONFIG_PACKAGE_hisi-osdrv3-sensor is not set

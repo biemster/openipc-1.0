@@ -3985,6 +3985,7 @@ CONFIG_WPA_MSG_MIN_PRIORITY=3
 # CONFIG_PACKAGE_hisi-osdrv1-binary is not set
 # CONFIG_PACKAGE_hisi-osdrv1-kmod is not set
 # CONFIG_PACKAGE_hisi-osdrv1-lib is not set
+# CONFIG_PACKAGE_hisi-osdrv1-majestic is not set
 # CONFIG_PACKAGE_hisi-osdrv1-sensor is not set
 # CONFIG_PACKAGE_hisi-osdrv2-sensor is not set
 

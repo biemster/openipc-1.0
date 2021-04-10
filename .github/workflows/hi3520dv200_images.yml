@@ -3,9 +3,9 @@ name: Hi3520Dv200 family
 on:
   push:
     branches:
-      - future
+      - master
     tags:
-      - "vr*"
+      - "v*"
 
 jobs:
   build_20dv200:

@@ -1,5 +1,4 @@
 
-
                         ethernet     boot_args     software
                         --------     ---------     ------------------------------
 Hi3516cv100        |    testing      done          luci-app-ipcam | gdbserver(+libthread-db), strace

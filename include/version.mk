@@ -21,7 +21,7 @@ qstrip_escape=$(subst ','\'',$(call qstrip,$(1)))
 #'
 
 VERSION_NUMBER:=$(call qstrip_escape,$(CONFIG_VERSION_NUMBER))
-VERSION_NUMBER:=$(if $(VERSION_NUMBER),$(VERSION_NUMBER),21.04.)
+VERSION_NUMBER:=$(if $(VERSION_NUMBER),$(VERSION_NUMBER),21.04.10)
 
 VERSION_CODE:=$(call qstrip_escape,$(CONFIG_VERSION_NUMBER))
 VERSION_CODE:=$(if $(VERSION_CODE),$(VERSION_CODE),Chaos Calmer)
@@ -86,5 +86,3 @@ VERSION_SED:=$(SED) 's,%U,$(VERSION_REPO),g' \
 	-e 's,%h,$(VERSION_HWREV),g'
 
 VERSION_SED_SCRIPT:=$(subst '\'','\'\\\\\'\'',$(VERSION_SED))
-
-VERSION_NUMBER:=10

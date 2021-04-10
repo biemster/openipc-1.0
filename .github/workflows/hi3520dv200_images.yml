@@ -3,7 +3,7 @@ name: Hi3520Dv200 family
 on:
   push:
     branches:
-      - master
+      - future
     tags:
       - "v*"
 

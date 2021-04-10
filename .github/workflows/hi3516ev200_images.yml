@@ -5,7 +5,7 @@ on:
     branches:
       - future
     tags:
-      - "vr*"
+      - "v*"
 
 jobs:
   build_16ev200:

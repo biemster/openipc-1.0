@@ -24,8 +24,8 @@ prepare_image_config() {
 }
 
 start_build() {
-    #make clean && time make -j$(($(nproc)+1))                                              # Clean and compile
-    make clean && time make -j$(($(nproc)+1))                                             # Clean and compile, slow for production
+    make clean && time make -j$(($(nproc)+1))                                              # Clean and compile
+    #make clean && time make -j$(($(nproc)+1))                                             # Clean and compile, slow for production
     #make clean && time make -j$(($(nproc)+1)) -i                                          # Clean and compile, without any errors
     #make clean && time make -j1 V=s                                                       # Clean and compile, with debug info
     #make clean && time make -j1 V=s -i                                                    # Clean and compile, with debug info, without any errors

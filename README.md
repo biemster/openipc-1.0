@@ -1,6 +1,6 @@
-## OpenIPC firmware
+## OpenIPC v1.0 (stable, OpenWrt based)
 
-Alternative firmware for IP cameras and NVRs based on the HiSilicon SoCs
+Alternative firmware for IP cameras based on the HiSilicon (and other) SoC's
 
 More information about project on our website [openipc.org](https://openipc.org)
 

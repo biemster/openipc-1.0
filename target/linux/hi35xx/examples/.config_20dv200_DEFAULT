@@ -4277,7 +4277,7 @@ CONFIG_PACKAGE_hisi-osdrv2-majestic=m
 #
 CONFIG_PACKAGE_demo=y
 CONFIG_PACKAGE_kdb=m
-CONFIG_PACKAGE_luci-app-ipcam=y
+CONFIG_PACKAGE_luci-app-ipcam2=y
 
 #
 # Sensors

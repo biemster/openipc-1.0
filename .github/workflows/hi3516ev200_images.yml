@@ -3,7 +3,7 @@ name: Hi3516Ev200 family
 on:
   push:
     branches:
-      - future
+      - master
     tags:
       - "v*"
 

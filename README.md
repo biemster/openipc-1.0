@@ -4,8 +4,11 @@ Alternative firmware for IP cameras based on the HiSilicon (and other) SoC's
 
 More information about project on our website [openipc.org](https://openipc.org)
 
-[![CI status](https://img.shields.io/github/v/release/OpenIPC/chaos_calmer.svg)](https://github.com/OpenIPC/chaos_calmer/releases/tag/latest)
 [![CI status](https://img.shields.io/github/downloads/OpenIPC/chaos_calmer/total.svg)](https://github.com/OpenIPC/chaos_calmer/releases)
+![GitHub repo size](https://img.shields.io/github/repo-size/OpenIPC/chaos_calmer)
+![GitHub issues](https://img.shields.io/github/issues/OpenIPC/chaos_calmer)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/OpenIPC/chaos_calmer)
+[![License](https://img.shields.io/github/license/OpenIPC/chaos_calmer)](https://opensource.org/licenses/MIT)
 
 -----
 

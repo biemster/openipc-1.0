@@ -92,7 +92,11 @@ endef
 
 
 define Build/uImage
-    $(if $(filter $(KERNEL_PATCHVER), 3.18.20 4.9.37),
+    $(if $(filter $(KERNEL_PATCHVER), 3.18.20),
+        $(call Image/BuildDTB,$(DTS_DIR)/hi3516cv300-demb.dts,$(DTS_DIR)/hi3516cv300.dtb)
+    )
+
+    $(if $(filter $(KERNEL_PATCHVER), 4.9.37),
         $(call Image/BuildDTB,$(DTS_DIR)/hi35$(SUBTARGET)-demb.dts,$(DTS_DIR)/hi35$(SUBTARGET).dtb)
     )
 

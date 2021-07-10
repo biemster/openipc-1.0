@@ -70,6 +70,13 @@ setup() {
   fi
 }
 
+monitor() {
+  if [ "$(cat ${way}/gpio${light}/value)" = "0" ]; then
+    curl http://127.0.0.1:8888/night/on
+  elif [ "$(cat ${way}/gpio${light}/value)" = "1" ]; then
+    curl http://127.0.0.1:8888/night/off
+  fi
+}
 
 if [ -n "$1" ]; then
   $1

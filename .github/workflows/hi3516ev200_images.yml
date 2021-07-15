@@ -1,6 +1,7 @@
 name: Hi3516Ev200 family
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - none

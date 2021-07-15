@@ -1,9 +1,10 @@
 name: Hi3516Cv100 family
 
 on:
+  workflow_dispatch:
   push:
     branches:
-      - master
+      - autogen
     tags:
       - "v*"
 

@@ -1,9 +1,10 @@
 name: Hi3520Dv200 family
 
 on:
+  workflow_dispatch:
   push:
     branches:
-      - master
+      - autogen
     tags:
       - "v*"
 

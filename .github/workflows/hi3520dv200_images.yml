@@ -2,11 +2,6 @@ name: Hi3520Dv200 family
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - autogen
-    tags:
-      - "v*"
 
 jobs:
   build_20dv200:

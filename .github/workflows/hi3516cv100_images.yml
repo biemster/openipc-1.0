@@ -2,11 +2,6 @@ name: Hi3516Cv100 family
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - autogen
-    tags:
-      - "v*"
 
 jobs:
   build_16cv100:

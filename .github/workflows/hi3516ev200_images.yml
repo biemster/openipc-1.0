@@ -2,11 +2,6 @@ name: Hi3516Ev200 family
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - none
-    tags:
-      - "v*"
 
 jobs:
   build_16ev200:

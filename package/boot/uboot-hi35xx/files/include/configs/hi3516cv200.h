@@ -151,6 +151,7 @@
 #define CONFIG_BOOTFILE		"uImage"		/* file to load */
 #define CONFIG_BAUDRATE		115200
 #define CONFIG_OSMEM		32M
+#define CONFIG_SOC		hi3516cv200
 #define CONFIG_SENSOR		auto
 #define CONFIG_LINUX_CMD	version
 

@@ -139,6 +139,7 @@
 #define CONFIG_ENV_NAND_ADDR		(CONFIG_ENV_OFFSET)
 #define CONFIG_ENV_SPI_ADDR		(CONFIG_ENV_OFFSET)
 #define CONFIG_CMD_SAVEENV
+#define CONFIG_CMD_RUN
 
 #define CONFIG_ENV_SIZE			0x10000 /*include ENV_HEADER_SIZE */
 #define CONFIG_ENV_SECT_SIZE		CONFIG_ENV_SIZE
@@ -227,7 +228,7 @@
  ------------------------------------------------------------------------*/
 
 #define CONFIG_VERSION_VARIABLE	1	/* used in common/main.c */
-#define CONFIG_SYS_PROMPT	"hisilicon # " /* Monitor Command Prompt */
+#define CONFIG_SYS_PROMPT	"OpenIPC # " /* Monitor Command Prompt */
 #define CONFIG_SYS_CBSIZE	1024           /* Console I/O Buffer Size */
 #define CONFIG_SYS_PBSIZE  (CONFIG_SYS_CBSIZE+sizeof(CONFIG_SYS_PROMPT)+16)
 
@@ -284,7 +285,7 @@
 /*-----------------------------------------------------------------------
  * usb storage system update
  * ----------------------------------------------------------------------*/
-/* #define CONFIG_AUTO_UPDATE			1 */
+#define CONFIG_AUTO_UPDATE			1
 #ifdef CONFIG_AUTO_UPDATE
 	#define CONFIG_AUTO_SD_UPDATE		1
 	#define CONFIG_AUTO_USB_UPDATE		1

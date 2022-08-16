@@ -11,6 +11,7 @@ include $(INCLUDE_DIR)/host.mk
 
 loadaddr-y := 0x80008000
 
+loadaddr-$(CONFIG_TARGET_hi35xx_16av100) := 0x80008000
 loadaddr-$(CONFIG_TARGET_hi35xx_16cv100) := 0x80008000
 loadaddr-$(CONFIG_TARGET_hi35xx_16cv200) := 0x80008000
 loadaddr-$(CONFIG_TARGET_hi35xx_16cv300) := 0x80008000
@@ -185,6 +186,11 @@ define NewDevice
     TARGET_DEVICES += $(1)
   endif # ifeq ($(PROFILE),$(7))
 endef
+
+
+ifeq ($(SUBTARGET),16av100)
+    $(eval $(call NewDevice,default,DEFAULT,DEFAULT,ALL,HI3516AV100,320k,DEFAULT)) # @flyrouter
+endif # ifeq ($(SUBTARGET),16av100)
 
 
 ifeq ($(SUBTARGET),16cv100)

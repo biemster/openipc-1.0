@@ -35,6 +35,7 @@ define uboot/Default
   COMPRESS:=
 endef
 
+UBOOTS:=16av100
 UBOOTS:=16cv100
 UBOOTS+=16cv200
 UBOOTS+=16cv300
@@ -48,7 +49,6 @@ UBOOTS+=20dv100
 UBOOTS+=20dv200
 #
 # hi3535_config
-# hi3516a_config
 # hi3536_config
 #
 
@@ -72,6 +72,11 @@ endef
 
 ifdef BUILD_VARIANT
 $(eval $(call uboot/$(BUILD_VARIANT)))
+ifeq ($(BUILD_VARIANT), 16av100)
+    UBOOT_CONFIG:=hi3516a_config
+	REG_FILE:=reg_info_hi3516cv100.bin
+	COMPRESS:=0
+endif
 ifeq ($(BUILD_VARIANT), 16cv100)
     UBOOT_CONFIG:=hi3516c_config
 	REG_FILE:=reg_info_hi3516cv100.bin

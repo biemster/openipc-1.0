@@ -22,7 +22,7 @@ include $(INCLUDE_DIR)/toolchain-build.mk
 define Host/Configure
 	(cd $(HOST_BUILD_DIR); \
 		gdb_cv_func_sigsetjmp=yes \
-		CFLAGS="-O2" \
+		CFLAGS="-O2 -fcommon" \
 		$(HOST_BUILD_DIR)/configure \
 		--prefix=$(TOOLCHAIN_DIR) \
 		--build=$(GNU_HOST_NAME) \
@@ -33,6 +33,11 @@ define Host/Configure
 		--disable-tui --disable-gdbtk --without-x \
 		--without-included-gettext \
 		--enable-threads \
+		--without-python \
+		--disable-binutils \
+		--disable-ld \
+		--disable-gas \
+		--disable-sim \
 	);
 endef
 

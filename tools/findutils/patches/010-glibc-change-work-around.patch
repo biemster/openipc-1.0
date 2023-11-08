@@ -1,0 +1,47 @@
+--- a/gnulib/lib/fseeko.c
++++ b/gnulib/lib/fseeko.c
+@@ -39,7 +39,7 @@
+ #endif
+ 
+   /* These tests are based on fpurge.c.  */
+-#if defined _IO_ferror_unlocked     /* GNU libc, BeOS */
++#if defined _IO_EOF_SEEN     /* GNU libc, BeOS */
+   if (fp->_IO_read_end == fp->_IO_read_ptr
+       && fp->_IO_write_ptr == fp->_IO_write_base
+       && fp->_IO_save_base == NULL)
+
+--- a/gnulib/lib/freading.c
++++ b/gnulib/lib/freading.c
+@@ -29,7 +29,7 @@
+   /* Most systems provide FILE as a struct and the necessary bitmask in
+      <stdio.h>, because they need it for implementing getc() and putc() as
+      fast macros.  */
+-#if defined _IO_ferror_unlocked     /* GNU libc, BeOS */
++#if defined _IO_EOF_SEEN     /* GNU libc, BeOS */
+   return ((fp->_flags & _IO_NO_WRITES) != 0
+ 	  || ((fp->_flags & (_IO_NO_READS | _IO_CURRENTLY_PUTTING)) == 0
+ 	      && fp->_IO_read_base != NULL));
+
+--- a/gnulib/lib/fpurge.c
++++ b/gnulib/lib/fpurge.c
+@@ -59,7 +59,7 @@
+   /* Most systems provide FILE as a struct and the necessary bitmask in
+      <stdio.h>, because they need it for implementing getc() and putc() as
+      fast macros.  */
+-# if defined _IO_ferror_unlocked    /* GNU libc, BeOS */
++# if defined _IO_EOF_SEEN    /* GNU libc, BeOS */
+   fp->_IO_read_end = fp->_IO_read_ptr;
+   fp->_IO_write_ptr = fp->_IO_write_base;
+   /* Avoid memory leak when there is an active ungetc buffer.  */
+
+--- a/gnulib/lib/freadahead.c
++++ b/gnulib/lib/freadahead.c
+@@ -22,7 +22,7 @@
+ size_t
+ freadahead (FILE *fp)
+ {
+-#if defined _IO_ferror_unlocked     /* GNU libc, BeOS */
++#if defined _IO_EOF_SEEN     /* GNU libc, BeOS */
+   if (fp->_IO_write_ptr > fp->_IO_write_base)
+     return 0;
+   return fp->_IO_read_end - fp->_IO_read_ptr;

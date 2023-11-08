@@ -1,5 +1,5 @@
 # 
-# Copyright (C) 2006-2014 OpenWrt.org
+# Copyright (C) 2006-2015 OpenWrt.org
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -7,16 +7,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=quilt
-PKG_VERSION:=0.63
+PKG_VERSION:=0.67
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=@SAVANNAH/quilt
-PKG_MD5SUM:=c0ef4beb58a6fa72563b955e70624b6e
+PKG_HASH:=3be3be0987e72a6c364678bb827e3e1fcc10322b56bc5f02b576698f55013cc2
 
 include $(INCLUDE_DIR)/host-build.mk
-
-HOST_CONFIGURE_ARGS += \
-	--with-find=$(FIND)
 
 define Host/Configure
 	cd $(HOST_BUILD_DIR) && autoconf

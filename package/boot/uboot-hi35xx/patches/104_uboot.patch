@@ -1,0 +1,57 @@
+diff --git a/include/sha1.h b/include/u-boot/sha1.h
+similarity index 100%
+rename from include/sha1.h
+rename to include/u-boot/sha1.h
+
+diff --git a/include/sha256.h b/include/u-boot/sha256.h
+similarity index 100%
+rename from include/sha256.h
+rename to include/u-boot/sha256.h
+
+--- a/tools/mkimage.h
++++ b/tools/mkimage.h
+@@ -34,1 +34,1 @@
+-#include <sha1.h>
++#include <u-boot/sha1.h>
+
+--- a/tools/imls/imls.c
++++ b/tools/imls/imls.c
+@@ -40,1 +40,1 @@
+-#include <sha1.h>
++#include <u-boot/sha1.h>
+
+--- a/board/pcs440ep/pcs440ep.c
++++ b/board/pcs440ep/pcs440ep.c
+@@ -32,1 +32,1 @@
+-#include <sha1.h>
++#include <u-boot/sha1.h>
+
+--- a/common/cmd_mem.c
++++ b/common/cmd_mem.c
+@@ -38,1 +38,1 @@
+-#include <sha1.h>
++#include <u-boot/sha1.h>
+
+--- a/common/image.c
++++ b/common/image.c
+@@ -56,1 +56,1 @@
+-#include <sha1.h>
++#include <u-boot/sha1.h>
+
+--- a/tools/ubsha1.c
++++ b/tools/ubsha1.c
+@@ -32,1 +32,1 @@
+-#include "sha1.h"
++#include "u-boot/sha1.h"
+
+--- a/lib/sha1.c
++++ b/lib/sha1.c
+@@ -39,1 +39,1 @@
+-#include "sha1.h"
++#include "u-boot/sha1.h"
+
+--- a/lib/sha256.c
++++ b/lib/sha256.c
+@@ -26,1 +26,1 @@
+-#include <sha256.h>
++#include <u-boot/sha256.h>

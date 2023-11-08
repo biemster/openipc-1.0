@@ -102,6 +102,8 @@ endif
 
 GCC_CONFIGURE:= \
 	SHELL="$(BASH)" \
+	CFLAGS="-O2 -std=gnu++98" \
+  CXXFLAGS="-O2 -std=gnu++98" \
 	$(if $(shell gcc --version 2>&1 | grep LLVM), \
 		CFLAGS="-O2 -fbracket-depth=512 -pipe" \
 		CXXFLAGS="-O2 -fbracket-depth=512 -pipe" \

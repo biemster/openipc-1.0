@@ -1,0 +1,30 @@
+--- a/lib/ext2fs/finddev.c
++++ b/lib/ext2fs/finddev.c
+@@ -31,6 +31,7 @@
+ #if HAVE_SYS_MKDEV_H
+ #include <sys/mkdev.h>
+ #endif
++#include <sys/sysmacros.h>
+ 
+ #include "ext2_fs.h"
+ #include "ext2fs.h"
+--- a/lib/blkid/devno.c
++++ b/lib/blkid/devno.c
+@@ -31,6 +31,7 @@
+ #if HAVE_SYS_MKDEV_H
+ #include <sys/mkdev.h>
+ #endif
++#include <sys/sysmacros.h>
+ 
+ #include "blkidP.h"
+ 
+--- a/lib/blkid/devname.c
++++ b/lib/blkid/devname.c
+@@ -37,6 +37,7 @@
+ #include <sys/mkdev.h>
+ #endif
+ #include <time.h>
++#include <sys/sysmacros.h>
+ 
+ #include "blkidP.h"
+ 
